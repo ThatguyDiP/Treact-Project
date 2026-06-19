@@ -1771,22 +1771,3 @@ footer {
         line-height: 1.5;
     }
 }
-
-
-/* Restores the icon font family for Font Awesome */
-.fa-solid, .fas, .far, .fab {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-}
-
-/* Styles your stars perfectly */
-.testimonial__rating {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 15px;
-}
-
-.testimonial__rating .fa-solid {
-    color: #ff9800; /* Gold/Orange stars */
-    font-size: 18px;
-}
