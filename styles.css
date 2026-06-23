@@ -944,7 +944,11 @@ section #testimonials {
 
 .testimonials__img,
 .testimonials__description {
+    display: flex;
+    flex-direction: column;
+    padding-left: 64px;
     width: 50%;
+
 }
 
 #testimonials .section__title {
@@ -956,24 +960,18 @@ section #testimonials {
     margin-top: 40px;
 }
 
-/*.testimonial__rating {
+.testimonial__rating {
     color: rgba(246, 173, 85);
     margin-right: 2px;
     margin-top: 4px;
 }
-*/
+
 .testimonial__rating {
     display: flex;
-    gap: 4px; /* Space between stars */
+    gap: 4px;
     margin-bottom: 15px;
+    font-size: 18px;
 }
-
-.testimonial__rating .fa-solid {
-    color: #ff9800; /* Gold/Orange color */
-    font-size: 18px; /* Size of the stars */
-}
-
-
 
 .testimonial__name {
     color: #4a5568;
@@ -985,16 +983,21 @@ section #testimonials {
 
 .testimonial__para {
     margin-top: 1rem;
-    ;
     line-height: 1.625;
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.625;
     font-size: 16px;
     color: rgb(74 85 104);
+    font-size: 16px;
+    font-weight: 500px;
+    line-height: 1.625;
+    color: rgb(74, 85, 104);
+    margin-top: 18px;
+    margin-bottom: 28px;
 }
 
-.testimonial_bottom {
+.testimonial__bottom {
     display: flex;
     justify-content: space-between;
 }
