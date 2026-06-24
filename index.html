@@ -5,56 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-
+    <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/7eb55ced1e.js" crossorigin="anonymous"></script>
+
     <title>Treact</title>
 </head>
 
 <body>
     <section id="landing">
-        <nav>
-            <div class="row nav__row">
-                <div class="nav__logo">
-                    <img class=nav__logo--img src="./assets/logo.2c489fc453a1783cbadacf914efa3df6.svg"
-                        alt="Treact Logo">
-                    <div class="nav__logo--title">Treact</div>
-                </div>
-                <div class="nav__links">
-                    <a href="#" class="nav__link">About</a>
-                    <a href="#" class="nav__link">Blog</a>
-                    <a href="#" class="nav__link">Pricing</a>
-                    <a href="#" class="nav__link">Contact Us</a>
-                    <a href="#" class="nav__link login">Login</a>
-                    <a href="#" class="nav__link nav__link--primary">Sign Up</a>
-                </div>
-                <button class="btn__menu" onclick="openMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="btn__menu--svg">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
+        nav>
+        <div class="row nav__row">
+
+            <!-- Logo -->
+            <div class="nav__logo">
+                <img class="nav__logo--img" src="./assets/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="Treact Logo">
+                <div class="nav__logo--title">Treact</div>
             </div>
-        </nav>
-        <div class="menu">
-            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+
+            <!-- Desktop links -->
+            <div class="nav__links">
+                <a href="#about" class="nav__link">About</a>
+                <a href="#blog" class="nav__link">Blog</a>
+                <a href="#pricing" class="nav__link">Pricing</a>
+                <a href="#contact" class="nav__link">Contact Us</a>
+                <a href="#login" class="nav__link login">Login</a>
+                <a href="#signup" class="nav__link nav__link--primary">Sign Up</a>
+            </div>
+
+            <!-- Hamburger button (hidden on desktop, shown on mobile) -->
+            <button class="btn__menu" id="btn__menu--open">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="light___StyledCloseIcon-lj69nl-14 fASujC">
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+        </div>
+
+        <!-- Mobile menu panel -->
+        <div class="menu" id="mobile__menu">
+
+            <!-- Close button -->
+            <button class="btn__menu btn__menu--close" id="btn__menu--close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
+
+            <!-- Mobile links -->
             <div class="menu__links">
-                <a href="#about" class="menu__link" onclick="closeMenu()">About</a>
-                <a href="#blog" class="menu__link" onclick="closeMenu()">Blog</a>
-                <a href="#pricing" class="menu__link" onclick="closeMenu()">Pricing</a>
-                <a href="#contat__us" class="menu__link" onclick="closeMenu()">Contact Us</a>
-                <a href="#login" class="menu__link" onclick="closeMenu()">Login</a>
-                <a href="#signup" class="menu__link menu__link--primary" onclick="closeMenu()">Sign Up</a>
+                <a href="#about" class="menu__link">About</a>
+                <a href="#blog" class="menu__link">Blog</a>
+                <a href="#pricing" class="menu__link">Pricing</a>
+                <a href="#contact" class="menu__link">Contact Us</a>
+                <a href="#login" class="menu__link">Login</a>
+                <a href="#signup" class="menu__link menu__link--primary">Sign Up</a>
             </div>
+
+        </div>
+        </nav>
+
         </div>
         <header>
             <div class="container">
@@ -554,10 +568,10 @@
                 </div>
                 <div class="footer__column">
                     <div class="footer__column--title">PRESS</div>
-                        <a class="footer__column--link">Logos</a>                    
-                        <a class="footer__column--link">Events</a>
-                        <a class="footer__column--link">Stories</a>
-                        <a class="footer__column--link">Office</a>
+                    <a class="footer__column--link">Logos</a>
+                    <a class="footer__column--link">Events</a>
+                    <a class="footer__column--link">Stories</a>
+                    <a class="footer__column--link">Office</a>
                 </div>
                 <div class="footer__column">
                     <div class="footer__column--title">TEAM</div>
@@ -573,41 +587,56 @@
                     <a class="footer__column--link">Terms of Service</a>
                     <a class="footer__column--link">Disclaimer</a>
                 </div>
-            <div class="footer__divider"></div>
-            <div class="footer__bottom">
-                <div class="footer__logo">
-                    <div class="footer__logo--img">
-                        <img src="./assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg" alt="footer__logo--img">
-                        <h5 class="footer__logo--text">Treact Inc.</h5>
-                    </div>
-                    <div class="footer__copyright"> © 2018 Treact Inc. All Rights Reserved. </div>
-                    <div class="footer__socials">
+                <div class="footer__divider"></div>
+                <div class="footer__bottom">
+                    <div class="footer__logo">
+                        <div class="footer__logo--img">
+                            <img src="./assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg" alt="footer__logo--img">
+                            <h5 class="footer__logo--text">Treact Inc.</h5>
+                        </div>
+                        <div class="footer__copyright"> © 2018 Treact Inc. All Rights Reserved. </div>
+                        <div class="footer__socials">
+                            <a class="footer__social--link">
+                                <svg fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                         <a class="footer__social--link">
                             <svg fill="currentColor" viewBox="0 0 24 24">
                                 <path
-                                    d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z">
+                                    d="M22.162 5.656a8.384 8.384 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.21 4.21 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.394 8.394 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 002.087-2.165z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="footer__social--link">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z">
                                 </path>
                             </svg>
                         </a>
                     </div>
-                    <a class="footer__social--link">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M22.162 5.656a8.384 8.384 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.21 4.21 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.394 8.394 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 002.087-2.165z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a class="footer__social--link">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z">
-                            </path>
-                        </svg>
-                    </a>
                 </div>
             </div>
-        </div>
     </footer>
+    <script>
+  document.getElementById("btn__menu--open").addEventListener("click", function() {
+    document.body.classList.add("menu--open");
+  });
+
+  document.getElementById("btn__menu--close").addEventListener("click", function() {
+    document.body.classList.remove("menu--open");
+  });
+
+  document.querySelectorAll(".menu__link").forEach(function(link) {
+    link.addEventListener("click", function() {
+      document.body.classList.remove("menu--open");
+    });
+  });
+</script>
 </body>
 
 </html>
